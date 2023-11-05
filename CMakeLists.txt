@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 
 project(qhotkey
     VERSION 1.5.0
@@ -6,14 +6,14 @@ project(qhotkey
     HOMEPAGE_URL "https://skycoder42.github.io/QHotkey/"
     LANGUAGES CXX)
 
-option(QHOTKEY_EXAMPLES "Build examples" OFF)
+option(QHOTKEY_EXAMPLES "Build examples" ON)
 option(QHOTKEY_INSTALL "Enable install rule" ON)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
 
 if(NOT QT_DEFAULT_MAJOR_VERSION)
-    set(QT_DEFAULT_MAJOR_VERSION 5 CACHE STRING "Qt version to use (5 or 6), defaults to 5")
+    set(QT_DEFAULT_MAJOR_VERSION 6 CACHE STRING "Qt version to use (5 or 6), defaults to 6")
 endif()
 
 if(QT_DEFAULT_MAJOR_VERSION EQUAL 6)
